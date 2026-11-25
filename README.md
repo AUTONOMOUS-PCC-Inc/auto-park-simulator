@@ -26,7 +26,7 @@ Unity 6로 만든 **자동 주차(AutoPark) 시뮬레이션 데모**입니다.<b
 > 경고가 뜨고, 패키지가 어긋날 수 있습니다. 같은 버전으로 맞춰 주세요.
 
 ```bash
-git clone https://github.com/YUNSUNGWOONG/auto-park-simulator.git
+git clone https://github.com/AUTONOMOUS-PCC-Inc/auto-park-simulator.git
 cd auto-park-simulator
 ```
 
@@ -207,5 +207,5 @@ python server.py --port 8080
 
 <div align="center">
 <sub><strong>Auto Park Simulator</strong> · Unity 6 · URP · WebGL</sub><br>
-<sub><a href="https://github.com/YUNSUNGWOONG/auto-park-simulator">github.com/YUNSUNGWOONG/auto-park-simulator</a></sub>
+<sub><a href="https://github.com/AUTONOMOUS-PCC-Inc/auto-park-simulator">github.com/AUTONOMOUS-PCC-Inc/auto-park-simulator</a></sub>
 </div>
