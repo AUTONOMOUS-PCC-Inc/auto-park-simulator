@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="동작 흐름: 키 입력, 시나리오 세팅, 시작 위치 이동, 웨이포인트 주행, 최종 자세 정렬 순서로 자동 주차가 진행된다">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1B33"/>
+      <stop offset="100%" stop-color="#112744"/>
+    </linearGradient>
+    <marker id="farrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L9,5 L0,9 z" fill="#3E6FA8"/>
+    </marker>
+    <style>
+      .t    { font-family: "Segoe UI", Inter, "Malgun Gothic", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif; }
+      .mono { font-family: "JetBrains Mono", "Consolas", "SF Mono", monospace; }
+      .sec  { font-size: 12px; font-weight: 600; fill: #7FB2FF; letter-spacing: 2px; }
+      .cap  { font-size: 12px; fill: #6F87A6; }
+      .nt   { font-size: 15px; font-weight: 700; }
+      .ns   { font-size: 11px; fill: #8FA3BF; }
+      .auth { font-size: 10.5px; font-weight: 600; }
+      .step { font-size: 9.5px; fill: #6F87A6; letter-spacing: 1.4px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="330" rx="10" fill="url(#fbg)"/>
+  <text class="t sec" x="28" y="34">HOW IT RUNS · ONE KEY PRESS, FIVE STEPS</text>
+
+  <g transform="translate(980,18)">
+    <rect width="192" height="24" rx="12" fill="#16A34A" fill-opacity="0.14" stroke="#16A34A" stroke-opacity="0.5"/>
+    <text class="t mono auth" x="96" y="16" fill="#6EE7A0" text-anchor="middle">scenarios 4 · hands-off</text>
+  </g>
+
+  <g>
+    <g transform="translate(45,80)">
+      <rect width="190" height="72" rx="8" fill="#0B1B33" stroke="#1E6FD9" stroke-opacity="0.65"/>
+      <text class="t step" x="14" y="20">1 · INPUT</text>
+      <text class="t nt" x="14" y="42" fill="#7FB2FF">키 입력</text>
+      <text class="t ns" x="14" y="60">1 ~ 4 중 하나 선택</text>
+    </g>
+    <g transform="translate(45,164)">
+      <rect width="190" height="24" rx="12" fill="#12294A" stroke="#2B4F85" stroke-opacity="0.6"/>
+      <text class="t mono auth" x="95" y="16" fill="#8FA3BF" text-anchor="middle">Keyboard 1–4</text>
+    </g>
+
+    <g transform="translate(275,80)">
+      <rect width="190" height="72" rx="8" fill="#0B1B33" stroke="#1E6FD9" stroke-opacity="0.65"/>
+      <text class="t step" x="14" y="20">2 · SETUP</text>
+      <text class="t nt" x="14" y="42" fill="#7FB2FF">시나리오 세팅</text>
+      <text class="t ns" x="14" y="60">장애물 차량 자동 배치</text>
+    </g>
+    <g transform="translate(275,164)">
+      <rect width="190" height="24" rx="12" fill="#12294A" stroke="#2B4F85" stroke-opacity="0.6"/>
+      <text class="t mono auth" x="95" y="16" fill="#8FA3BF" text-anchor="middle">CarPose1~4</text>
+    </g>
+
+    <g transform="translate(505,80)">
+      <rect width="190" height="72" rx="8" fill="#0B1B33" stroke="#1E6FD9" stroke-opacity="0.65"/>
+      <text class="t step" x="14" y="20">3 · ENTRY</text>
+      <text class="t nt" x="14" y="42" fill="#7FB2FF">시작 위치로 이동</text>
+      <text class="t ns" x="14" y="60">경로 맨 앞에 자동 추가</text>
+    </g>
+    <g transform="translate(505,164)">
+      <rect width="190" height="24" rx="12" fill="#12294A" stroke="#2B4F85" stroke-opacity="0.6"/>
+      <text class="t mono auth" x="95" y="16" fill="#8FA3BF" text-anchor="middle">EntryPoint</text>
+    </g>
+
+    <g transform="translate(735,80)">
+      <rect width="190" height="72" rx="8" fill="#0B1B33" stroke="#16A34A" stroke-opacity="0.65"/>
+      <text class="t step" x="14" y="20">4 · DRIVE</text>
+      <text class="t nt" x="14" y="42" fill="#6EE7A0">웨이포인트 주행</text>
+      <text class="t ns" x="14" y="60">회전 · 전진 · 후진 · 대기</text>
+    </g>
+    <g transform="translate(735,164)">
+      <rect width="190" height="24" rx="12" fill="#0B2A1C" stroke="#16A34A" stroke-opacity="0.6"/>
+      <text class="t mono auth" x="95" y="16" fill="#6EE7A0" text-anchor="middle">AutoParkWaypoint</text>
+    </g>
+
+    <g transform="translate(965,80)">
+      <rect width="190" height="72" rx="8" fill="#0B1B33" stroke="#7C3AED" stroke-opacity="0.65"/>
+      <text class="t step" x="14" y="20">5 · PARK</text>
+      <text class="t nt" x="14" y="42" fill="#C4A3F5">최종 자세로 정렬</text>
+      <text class="t ns" x="14" y="60">마지막 웨이포인트 = 주차 자세</text>
+    </g>
+    <g transform="translate(965,164)">
+      <rect width="190" height="24" rx="12" fill="#12294A" stroke="#7C3AED" stroke-opacity="0.6"/>
+      <text class="t mono auth" x="95" y="16" fill="#C4A3F5" text-anchor="middle">last waypoint</text>
+    </g>
+
+    <g fill="none" stroke="#3E6FA8" stroke-width="2" marker-end="url(#farrow)">
+      <path d="M 235 116 h 34"/>
+      <path d="M 465 116 h 34"/>
+      <path d="M 695 116 h 34"/>
+      <path d="M 925 116 h 34"/>
+    </g>
+  </g>
+
+  <!-- 주행 구간 강조 -->
+  <g stroke="#EAB308" stroke-opacity="0.75" fill="none" stroke-width="1.4">
+    <path d="M 735 206 v 10 h 190 v -10"/>
+  </g>
+  <text class="t mono" x="830" y="236" font-size="10.5" fill="#F3D468" text-anchor="middle">tune: speed · turnSpeed · arriveDist</text>
+  <text class="t cap" x="45" y="236">0 키: 언제든 시작 위치(EntryPoint)로 리셋</text>
+
+  <!-- 핵심 -->
+  <g transform="translate(210,264)">
+    <rect width="780" height="42" rx="8" fill="#0F1D14" stroke="#16A34A" stroke-opacity="0.55"/>
+    <text class="t mono" x="22" y="26" font-size="12" fill="#6EE7A0">마지막 웨이포인트 = 최종 주차 자세</text>
+    <text class="t" x="330" y="26" font-size="11.5" fill="#8FA3BF">위치와 회전이 그대로 주차 결과가 된다. 경로를 바꾸려면 오브젝트만 옮기면 된다</text>
+  </g>
+</svg>
