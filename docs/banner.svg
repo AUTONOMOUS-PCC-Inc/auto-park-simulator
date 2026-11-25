@@ -1,39 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Auto Park Simulator — 차량이 장애물 사이로 스스로 주차한다">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-label="Auto Park Simulator — 차량이 웨이포인트를 따라 장애물 사이로 스스로 주차한다">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0B1B33"/>
-      <stop offset="1" stop-color="#16325C"/>
+      <stop offset="0%" stop-color="#0B1B33"/>
+      <stop offset="60%" stop-color="#0E2342"/>
+      <stop offset="100%" stop-color="#132C52"/>
     </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E6FD9"/>
+      <stop offset="50%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1E6FD9" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#1E6FD9" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,1 L9,5 L0,9 z" fill="#7FB2FF"/>
+    </marker>
+    <style>
+      .t   { font-family: "Segoe UI", Inter, "Malgun Gothic", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif; }
+      .h1  { font-size: 44px; font-weight: 700; fill: #F2F7FF; letter-spacing: -0.5px; }
+      .h2  { font-size: 15px; font-weight: 600; fill: #7FB2FF; letter-spacing: 3.2px; }
+      .sub { font-size: 16px; fill: #8FA3BF; }
+      .tag { font-size: 12.5px; font-weight: 600; fill: #BFD3EE; }
+      .mono{ font-family: "JetBrains Mono", "Consolas", "SF Mono", monospace; }
+    </style>
   </defs>
-  <rect width="1200" height="360" rx="20" fill="url(#bg)"/>
 
-  <!-- parking lot -->
-  <g transform="translate(640,70)">
-    <rect x="0" y="0" width="500" height="220" rx="12" fill="#0E2442" stroke="#2A4A7A" stroke-width="2"/>
-    <g stroke="#E5EDF8" stroke-width="3" opacity="0.55">
-      <line x1="70" y1="0" x2="70" y2="80"/><line x1="170" y1="0" x2="170" y2="80"/>
-      <line x1="270" y1="0" x2="270" y2="80"/><line x1="370" y1="0" x2="370" y2="80"/>
-      <line x1="470" y1="0" x2="470" y2="80"/>
+  <rect width="1200" height="250" rx="10" fill="url(#bg)"/>
+  <circle cx="985" cy="125" r="190" fill="url(#glow)"/>
+
+  <!-- 좌측: P 마크 — 주차 표지판을 도는 경로 -->
+  <g transform="translate(96,125)" opacity="0.95">
+    <circle r="58" fill="none" stroke="#1E6FD9" stroke-opacity="0.18" stroke-width="1"/>
+    <circle r="46" fill="none" stroke="#2B4F85" stroke-width="1" stroke-dasharray="3 4"/>
+    <g fill="none" stroke="#7FB2FF" stroke-opacity="0.75" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M 32 -33 A 46 46 0 0 1 44 -8"/>
+      <path d="M 30 35 A 46 46 0 0 1 -28 36"/>
+      <path d="M -45 -9 A 46 46 0 0 1 -30 -34"/>
     </g>
-    <!-- obstacle cars -->
-    <rect x="86" y="14" width="68" height="52" rx="10" fill="#7C3AED"/>
-    <rect x="286" y="14" width="68" height="52" rx="10" fill="#EAB308"/>
-    <!-- target slot -->
-    <rect x="186" y="10" width="68" height="60" rx="8" fill="none" stroke="#16A34A" stroke-width="3" stroke-dasharray="8 6"/>
-    <!-- path -->
-    <path d="M 40 190 L 300 190 Q 330 190 330 160 L 330 120 Q 330 100 300 100 L 235 100 L 220 40"
-          fill="none" stroke="#1E6FD9" stroke-width="5" stroke-dasharray="3 9" stroke-linecap="round"/>
-    <circle cx="220" cy="40" r="7" fill="#16A34A"/>
-    <!-- ego car -->
-    <g transform="translate(14,172)">
-      <rect width="66" height="36" rx="9" fill="#1E6FD9"/>
-      <rect x="40" y="6" width="16" height="24" rx="4" fill="#BFD9FF"/>
+    <rect x="-22" y="-22" width="44" height="44" rx="8" fill="#0B1B33" stroke="#2B4F85"/>
+    <path d="M -8 12 V -12 H 3 A 7.5 7.5 0 0 1 3 3 H -8" fill="none" stroke="#6EE7A0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="t mono" x="0" y="57" font-size="10" fill="#6EE7A0" text-anchor="middle">park by itself</text>
+  </g>
+
+  <!-- 본문 -->
+  <text class="t h2" x="196" y="72">AUTONOMOUS PCC · UNITY 6 SIMULATOR</text>
+  <text class="t h1" x="196" y="122">Auto Park Simulator</text>
+  <text class="t sub" x="196" y="153">차량이 웨이포인트를 따라 장애물 사이로 스스로 주차한다.</text>
+
+  <!-- 태그 -->
+  <g transform="translate(196,176)">
+    <g>
+      <rect x="0" y="0" width="118" height="26" rx="13" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.45"/>
+      <text class="t tag mono" x="59" y="17.5" text-anchor="middle">4 scenarios</text>
+    </g>
+    <g transform="translate(128,0)">
+      <rect x="0" y="0" width="76" height="26" rx="13" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.45"/>
+      <text class="t tag mono" x="38" y="17.5" text-anchor="middle">URP</text>
+    </g>
+    <g transform="translate(214,0)">
+      <rect x="0" y="0" width="92" height="26" rx="13" fill="#16A34A" fill-opacity="0.16" stroke="#16A34A" stroke-opacity="0.45"/>
+      <text class="t tag mono" x="46" y="17.5" text-anchor="middle">WebGL</text>
+    </g>
+    <g transform="translate(316,0)">
+      <rect x="0" y="0" width="118" height="26" rx="13" fill="#7C3AED" fill-opacity="0.16" stroke="#7C3AED" stroke-opacity="0.45"/>
+      <text class="t tag mono" x="59" y="17.5" text-anchor="middle">PMS View</text>
     </g>
   </g>
 
-  <!-- text -->
-  <text x="70" y="140" fill="#FFFFFF" font-family="'Segoe UI','Malgun Gothic',Arial,sans-serif" font-size="58" font-weight="800">Auto Park</text>
-  <text x="70" y="205" fill="#FFFFFF" font-family="'Segoe UI','Malgun Gothic',Arial,sans-serif" font-size="58" font-weight="800">Simulator</text>
-  <text x="72" y="248" fill="#9DB7DB" font-family="'Segoe UI','Malgun Gothic',Arial,sans-serif" font-size="22">차량이 장애물 사이로 스스로 주차한다</text>
-  <text x="72" y="290" fill="#6F8FBF" font-family="'Segoe UI',Arial,sans-serif" font-size="16" letter-spacing="2">UNITY 6 · URP · WEBGL · PMS VIEW</text>
+  <!-- 우측: 탑뷰 — 장애물 사이 빈 칸으로 들어가는 경로 -->
+  <g transform="translate(878,32)" opacity="0.96">
+    <rect width="236" height="186" rx="8" fill="#0B1B33" stroke="#2B4F85"/>
+    <path d="M0 24 h236" stroke="#2B4F85" stroke-width="1"/>
+    <circle cx="14" cy="12" r="3" fill="#3E6FA8"/><circle cx="26" cy="12" r="3" fill="#3E6FA8"/><circle cx="38" cy="12" r="3" fill="#3E6FA8"/>
+    <text class="t mono" x="56" y="16" font-size="9.5" fill="#6F87A6">top view · press V</text>
+
+    <!-- 주차 칸 구분선 -->
+    <g stroke="#2B4F85" stroke-width="1.5">
+      <path d="M 20 34 v 52"/><path d="M 82 34 v 52"/><path d="M 144 34 v 52"/><path d="M 206 34 v 52"/>
+    </g>
+    <!-- 장애물 차량 -->
+    <rect x="28" y="44" width="46" height="34" rx="6" fill="#7C3AED" fill-opacity="0.35" stroke="#C4A3F5"/>
+    <rect x="152" y="44" width="46" height="34" rx="6" fill="#EAB308" fill-opacity="0.30" stroke="#F5D86B"/>
+    <!-- 목표 칸 -->
+    <rect x="90" y="40" width="46" height="42" rx="5" fill="#16A34A" fill-opacity="0.12" stroke="#16A34A" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <text class="t mono" x="113" y="64" font-size="10" fill="#6EE7A0" text-anchor="middle">P</text>
+
+    <!-- 주행 경로 -->
+    <path d="M 30 150 H 160 Q 176 150 176 134 V 112 Q 176 100 164 100 H 124 Q 113 100 113 90 V 86"
+          fill="none" stroke="#7FB2FF" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <circle cx="30" cy="150" r="3.5" fill="#1E6FD9"/>
+    <!-- 자차 -->
+    <g transform="translate(14,138)">
+      <rect width="34" height="24" rx="6" fill="#1E6FD9" fill-opacity="0.4" stroke="#7FB2FF"/>
+      <rect x="21" y="4" width="9" height="16" rx="2.5" fill="#BFD9FF" fill-opacity="0.7"/>
+    </g>
+    <text class="t mono" x="118" y="176" font-size="9" fill="#6F87A6" text-anchor="middle">waypoints · reverse · wait</text>
+  </g>
+
+  <rect x="0" y="244" width="1200" height="6" rx="3" fill="url(#accent)" opacity="0.85"/>
 </svg>
