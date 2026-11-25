@@ -82,20 +82,9 @@ cd auto-park-simulator
 
 "어느 파일을 보면 되지"가 가장 먼저 막히는 지점이라, 먼저 봐 두면 좋습니다.
 
-```
-auto-park-simulator/
-├── Assets/
-│   ├── Scenes/SampleScene.unity     ← 메인 씬
-│   ├── Scripts/                     ← 게임 로직 (아래 표)
-│   ├── Azerilo/                     ← 차량 3D 모델 (서드파티)
-│   └── Materials/ · Images/ · ...   ← 리소스
-├── Packages/manifest.json           ← 패키지 의존성 (URP, Input System 등)
-├── ProjectSettings/                 ← Unity 프로젝트 설정
-└── autopark/
-    ├── index.html                   ← WebGL 호스팅 페이지
-    ├── server.py                    ← gzip 지원 로컬 서버
-    └── Build/                       ← 직접 빌드해서 채우는 곳 (git 제외)
-```
+<div align="center">
+<img src="docs/layout.svg" alt="폴더 지도 — Assets, Packages, ProjectSettings, autopark 폴더의 역할과 수정 여부를 색으로 구분" width="100%">
+</div>
 
 기억할 것은 둘입니다. **코드는 `Assets/Scripts/` 에 다섯 파일뿐**이고,
 **`autopark/Build/` 는 클론에 따라오지 않으니 직접 빌드해야 합니다.**

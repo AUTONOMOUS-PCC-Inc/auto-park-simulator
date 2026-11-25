@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 524" width="1200" height="524" role="img" aria-label="폴더 지도: Assets, Packages, ProjectSettings, autopark 폴더가 각각 무엇이고 어떤 걸 건드려야 하는지">
+  <defs>
+    <linearGradient id="lbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1B33"/>
+      <stop offset="100%" stop-color="#112744"/>
+    </linearGradient>
+    <style>
+      .t    { font-family: "Segoe UI", Inter, "Malgun Gothic", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif; }
+      .mono { font-family: "JetBrains Mono", "Consolas", "SF Mono", monospace; }
+      .sec  { font-size: 12px; font-weight: 600; fill: #7FB2FF; letter-spacing: 2px; }
+      .leg  { font-size: 12px; fill: #6F87A6; }
+      .repo { font-size: 15px; font-weight: 700; fill: #E9F1FD; }
+      .path { font-size: 12.5px; fill: #BFD3EE; }
+      .desc { font-size: 12px; fill: #8FA3BF; }
+      .chip { font-size: 10.5px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="524" rx="10" fill="url(#lbg)"/>
+  <text class="t sec" x="28" y="34">WHAT IS IN THIS FOLDER</text>
+  <text class="t leg" x="28" y="54">파랑 클론에 포함 · 초록 직접 수정하거나 채움 · 빨강 건드리지 않기 · 보라 WebGL 전용</text>
+
+  <text class="t mono repo" x="28" y="92">auto-park-simulator/</text>
+  <text class="t desc" x="250" y="92">저장소 하나가 Unity 프로젝트이자 WebGL 호스팅 폴더 — 코드는 Assets/Scripts/ 에만 있다</text>
+  <line x1="28" y1="106" x2="1172" y2="106" stroke="#2B4F85" stroke-opacity="0.6"/>
+
+  <g transform="translate(0,140)">
+    <text class="t mono path" x="40" y="0" fill="#E9F1FD">Assets/</text>
+    <g transform="translate(330,-13)">
+      <rect width="59" height="20" rx="10" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.5"/>
+      <text class="t chip" x="29" y="14" fill="#7FB2FF" text-anchor="middle">Unity</text>
+    </g>
+    <text class="t desc" x="500" y="0">게임에 들어가는 모든 것 — 씬, 스크립트, 모델, 리소스</text>
+  </g>
+  <g transform="translate(0,174)">
+    <text class="t mono path" x="64" y="0">Scenes/SampleScene.unity</text>
+    <g transform="translate(330,-13)">
+      <rect width="85" height="20" rx="10" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.5"/>
+      <text class="t chip" x="42" y="14" fill="#7FB2FF" text-anchor="middle">메인 씬</text>
+    </g>
+    <text class="t desc" x="500" y="0">▶ Play 로 실행하는 씬. 인스펙터 연결과 웨이포인트가 여기에 있다</text>
+  </g>
+  <g transform="translate(0,208)">
+    <text class="t mono path" x="64" y="0" fill="#E9F1FD">Scripts/</text>
+    <g transform="translate(330,-13)">
+      <rect width="121" height="20" rx="10" fill="#16A34A" fill-opacity="0.16" stroke="#16A34A" stroke-opacity="0.5"/>
+      <text class="t chip" x="60" y="14" fill="#6EE7A0" text-anchor="middle">코드는 여기</text>
+    </g>
+    <text class="t desc" x="500" y="0">C# 다섯 파일이 전부 — 시나리오, 웨이포인트, 카메라</text>
+  </g>
+  <g transform="translate(0,242)">
+    <text class="t mono path" x="64" y="0" fill="#E9F1FD">Azerilo/</text>
+    <g transform="translate(330,-13)">
+      <rect width="96" height="20" rx="10" fill="#EF4444" fill-opacity="0.16" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text class="t chip" x="48" y="14" fill="#FCA5A5" text-anchor="middle">서드파티</text>
+    </g>
+    <text class="t desc" x="500" y="0">차량 3D 모델. 제공처 라이선스를 따르니 수정하지 않는다</text>
+  </g>
+  <g transform="translate(0,276)">
+    <text class="t mono path" x="64" y="0" fill="#E9F1FD">Materials/ · Images/</text>
+    <g transform="translate(330,-13)">
+      <rect width="78" height="20" rx="10" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.5"/>
+      <text class="t chip" x="39" y="14" fill="#7FB2FF" text-anchor="middle">리소스</text>
+    </g>
+    <text class="t desc" x="500" y="0">머티리얼과 이미지</text>
+  </g>
+  <g transform="translate(0,310)">
+    <text class="t mono path" x="40" y="0">Packages/manifest.json</text>
+    <g transform="translate(330,-13)">
+      <rect width="139" height="20" rx="10" fill="#EF4444" fill-opacity="0.16" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text class="t chip" x="69" y="14" fill="#FCA5A5" text-anchor="middle">건드리지 않기</text>
+    </g>
+    <text class="t desc" x="500" y="0">패키지 의존성 — URP, Input System 등</text>
+  </g>
+  <g transform="translate(0,344)">
+    <text class="t mono path" x="40" y="0" fill="#E9F1FD">ProjectSettings/</text>
+    <g transform="translate(330,-13)">
+      <rect width="139" height="20" rx="10" fill="#EF4444" fill-opacity="0.16" stroke="#EF4444" stroke-opacity="0.5"/>
+      <text class="t chip" x="69" y="14" fill="#FCA5A5" text-anchor="middle">건드리지 않기</text>
+    </g>
+    <text class="t desc" x="500" y="0">Unity 프로젝트 설정. 에디터 버전은 6000.3.1f1</text>
+  </g>
+  <g transform="translate(0,378)">
+    <text class="t mono path" x="40" y="0" fill="#E9F1FD">autopark/</text>
+    <g transform="translate(330,-13)">
+      <rect width="59" height="20" rx="10" fill="#7C3AED" fill-opacity="0.16" stroke="#7C3AED" stroke-opacity="0.5"/>
+      <text class="t chip" x="29" y="14" fill="#C4A3F5" text-anchor="middle">WebGL</text>
+    </g>
+    <text class="t desc" x="500" y="0">브라우저 시연용 폴더. 서버 명령은 이 안에서 실행한다</text>
+  </g>
+  <g transform="translate(0,412)">
+    <text class="t mono path" x="64" y="0">index.html</text>
+    <g transform="translate(330,-13)">
+      <rect width="121" height="20" rx="10" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.5"/>
+      <text class="t chip" x="60" y="14" fill="#7FB2FF" text-anchor="middle">클론에 포함</text>
+    </g>
+    <text class="t desc" x="500" y="0">WebGL 호스팅 페이지. autopark.* 파일명을 불러온다</text>
+  </g>
+  <g transform="translate(0,446)">
+    <text class="t mono path" x="64" y="0">server.py</text>
+    <g transform="translate(330,-13)">
+      <rect width="121" height="20" rx="10" fill="#1E6FD9" fill-opacity="0.16" stroke="#1E6FD9" stroke-opacity="0.5"/>
+      <text class="t chip" x="60" y="14" fill="#7FB2FF" text-anchor="middle">클론에 포함</text>
+    </g>
+    <text class="t desc" x="500" y="0">gzip 헤더를 붙여 주는 로컬 서버. 일반 http.server 는 안 된다</text>
+  </g>
+  <g transform="translate(0,480)">
+    <text class="t mono path" x="64" y="0" fill="#E9F1FD">Build/</text>
+    <g transform="translate(330,-13)">
+      <rect width="103" height="20" rx="10" fill="#16A34A" fill-opacity="0.16" stroke="#16A34A" stroke-opacity="0.5"/>
+      <text class="t chip" x="51" y="14" fill="#6EE7A0" text-anchor="middle">직접 빌드</text>
+    </g>
+    <text class="t desc" x="500" y="0">클론에 따라오지 않는다. Unity 에서 WebGL 빌드하면 채워진다</text>
+  </g>
+</svg>
