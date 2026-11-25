@@ -1,6 +1,7 @@
 <div align="center">
 
-# Auto Park Simulator 🚗
+<img src="docs/banner.svg" alt="Auto Park Simulator — 차량이 장애물 사이로 스스로 주차한다" width="100%">
+
 
 ### 차량이 장애물 사이로 스스로 주차하는 장면을, 키 하나로 바로 돌려 본다.
 
